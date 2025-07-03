@@ -1,3 +1,4 @@
+
 # -- coding: utf-8 --
 """
 Created on Mon Jun 23 10:26:00 2025
@@ -85,7 +86,7 @@ if selected == 'Heart Disease Prediction':
         
         ca = st.text_input('No. of Major Vessels (0–3)')
     # prediction button
-    if st.button('Diabetes Test Result'):
+    if st.button('Heart Test Result'):
         input_data = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
         input_data_as_float = [float(i) for i in input_data]
         input_data_reshaped = [input_data_as_float]
@@ -131,7 +132,7 @@ if selected == 'Parkinsons Prediction':
         input_data_as_float = [float(i) for i in input_data]
         input_data_reshaped = [input_data_as_float]
         
-        prediction = parkinsons_model.predict(input_data_reshaped)
+        prediction = Park_model.predict(input_data_reshaped)
         
         if prediction[0] == 0:
             st.success('The person does not have Parkinsons disease.')
